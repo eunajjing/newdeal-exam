@@ -1,0 +1,18 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'eclipse'
+    // 이클립스가 읽을 수 있도록 플러그인을 장착
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:26.0-jre'
+    testImplementation 'junit:junit:4.12'
+}
+
+mainClassName = 'bitcamp.newdeal.lms.App'
