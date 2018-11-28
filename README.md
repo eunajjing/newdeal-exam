@@ -5,3 +5,9 @@
 1. 2018-11-27 [만든 프로젝트 폴더 newdeal-project-01](https://github.com/eunajjing/newdeal-exam/tree/master/newdeal-project-01)
    - [블로그 포스팅](https://eunajjing.github.io/2018/11/27/181127/)
 
+2. 2018-11-28
+   - [프로젝트 폴더2](https://github.com/eunajjing/newdeal-exam/tree/master/newdeal-project-02)
+   - [프로젝트 폴더3](https://github.com/eunajjing/newdeal-exam/tree/master/newdeal-project-03)
+   - [블로그 포스팅1_깃]()
+   - [블로그 포스팅2_과제]()
+
