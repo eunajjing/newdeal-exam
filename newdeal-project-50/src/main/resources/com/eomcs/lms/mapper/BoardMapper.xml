@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDao">
+<resultMap type="board" id="boardMap">
+<!-- board 칼럼을 프로퍼티 이름과 연결 -->
+<result column="bno" property="no"/>
+<result column="cont" property="contents"/>
+</resultMap>
+  <select id="findAll" resultMap="boardMap">
+    select bno, cont, cdt, view from board
+  </select>
+  <select id="findByNo" resultType="Board" parameterType="int">
+    select 
+      bno no, 
+      cont contents, 
+      cdt createdDate, 
+      view viewCount,
+      mno writerNo,
+      lno lessonNo 
+    from board
+    where bno=#{no}
+  </select>
+  <insert id="insert" parameterType="Board">
+    insert into board(cont,mno,lno) values(#{contents}, #{writerNo}, #{lessonNo})
+  </insert>
+  <update id="update" parameterType="Board">
+    update board set cont=#{contents} where bno=#{no}
+  </update>
+  <delete id="delete">
+    delete from board where bno=#{no}
+  </delete>
+</mapper>
